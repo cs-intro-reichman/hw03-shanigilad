@@ -11,7 +11,19 @@ public class LowerCase {
     * Non-letter characters are left as is.
     */
     public static String lowerCase(String s) {
-        // Replace the following statement with your code
-        return null;
+        String low = ""; 
+        int n = s.length();
+
+        for (int i = 0 ; i < n ; i++) {
+            char letter = s.charAt(i);
+                if (letter > 64 && letter < 91) {
+                    int mid =  (int) letter + 32;
+                    char lowercase = (char) mid;
+                    low = low + lowercase; 
+                } else {
+                      low = low + (char) letter;
+                }
+        }
+                return low;
     }
 }
